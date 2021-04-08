@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Quicksand:wght@500&display=swap');
+
+:root {
+    --vertical-space: 1rem;
+    --horizontal-space: 3rem;
+    --light-color:#FF082D;
+    --body-color: #470569;
+    --heading-color:#470569;
+    --contrast-color:#D92B51;
+}
+
+
+body {
+    font-size: 18px;
+    line-height: 1.5em;
+    font-family: 'Quicksand', sans-serif;
+    background-image: repeating-linear-gradient(45deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(22.5deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(45deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(157.5deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(112.5deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(67.5deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(135deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),repeating-linear-gradient(90deg, rgba(0,223,255, 0.03) 0px, rgba(0,223,255, 0.03) 1px,transparent 1px, transparent 12px),linear-gradient(90deg, rgb(105,99,160),rgba(201,74,90, 0.94));
+
+    color: var(--body-color);
+}
+h1, h2{
+    line-height: 1.2em;
+    font-family: 'Itim', cursive;
+    color: var(--heading-color);
+}
+
+
+a {
+    color: var(--body-color);
+    text-decoration-color: var(--contrast-color);
+}
+
+a:hover {
+    color: var(--contrast-color);
+    text-decoration-color: var(--body-color);
+}
+
+body#about img {
+    height: 15em;
+    border-style: solid;
+    
+}
+
+@media screen and (max-width: 800px) {
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+}
+
+body#portfolio img {
+    width: 12em;
+    border-style: solid;
+}
+
+
+@media screen and (min-width: 400px) {
+    body#portfolio img {width: 20em}
+
+}
+
+p{
+    max-width: 50em;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "head head"
+                             "nav nav"
+                             "main main"
+                             "foot foot";
+        grid-template-rows: auto 1fr auto;
+
+}
+
+
+body > header {
+    grid-area: head;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+body > nav {
+    grid-area: nav;
+    text-align: center;
+}
+
+main > h2 {
+    text-align: center;
+    margin-top: 0%;
+}
+main > h3 {
+    margin-top: 0%;
+}
+
+
+@media screen and (min-width: 792px) {
+    body {
+       grid-template-areas: "head head"
+                         "nav main"
+                         "nav main"
+                         "foot foot";
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: auto auto 1fr auto;
+    }
+    body > header {
+        text-align: left;
+    }
+
+    nav {
+        text-align: left;
+    }
+
+    main > h1 {
+        text-align: left;
+        margin-top: 1rem;
+    }
+    
+}
+
+body > * {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+
+}
+
+
+
+
+
+body > nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+body > nav ul li {
+    display: inline;
+    padding: 0px 5px;
+}
+
+body > main {
+    grid-area: main;
+}
+
+body > footer {
+    grid-area: foot;
+}
+
+footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+
+}
+
+header {
+    padding-top: var(--vertical-space);
+}
+
+header h1, footer h1 {
+    margin: 0;
+}
+
+body#portfolio ul#portfolioItems {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0;
+}
+@media screen and (min-width: 25em) {
+    body#portfolio ul#portfolioItemsli {
+        flex-basis: 48%;
+        padding-right: 2%;
+    }  
+}
+
+
+body#portfolio ul#portfolioItemsli img {
+    max-width: 100%;
+}
+
+
+
+
+
